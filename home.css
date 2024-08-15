@@ -1,0 +1,2086 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Poppins",sans-serif;
+    scroll-behavior: smooth;
+}
+.E-data
+{   
+    background-color:black;
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+/*-----------------------------------------------Header section start -----------------------------------------------*/
+header
+{
+    height: 13vh;
+    width: 100vw;
+    position: fixed;
+    top:0;
+    left: 0;
+    padding:20px 0px 20px 0px;
+    z-index: 200;
+    /* background-color: #3f3e3e; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+header #logo
+{
+    background: linear-gradient(to left,#7d2ae8 ,aqua,gray);
+    -webkit-background-clip: text;
+    color:transparent;
+    font-size: 30px;
+    font-weight: bolder;
+    font-family:'Courier New', Courier, monospace;
+    position: relative; 
+}
+header #logo h1
+{
+    text-wrap: nowrap;
+}
+header #logo h1 span
+{
+    display: inline-block;
+    background-color: red;
+    color:transparent;
+
+    position:absolute;
+    left: 0.01em;
+    bottom: 0.01em;;
+  
+    height: 0.08em;
+    width: 5em;
+    box-shadow: 0px 5px red; ;
+   
+    animation:move normal .5s;
+}
+@keyframes move 
+{
+    0%
+    {
+       
+        width: 0em;
+        box-shadow: 0px 5px red;
+    }
+    25%
+    {
+        width: 0.40em;
+        box-shadow: 0px 5px red;
+    }
+    50%
+    {
+        width: 0.80em;
+        box-shadow: 0px 5px red; ;
+    }
+    75%
+    {
+        width: 1.20em;
+        box-shadow: 0px 5px red; ;
+    }
+    100%
+    {
+        width: 2em;
+        box-shadow: 0px 5px red; ;
+    }
+
+}
+.day_Night h1
+{
+    text-align: center;
+}    
+header .switch
+{
+    display: inline-block;
+    position: relative;
+    height: 35px;
+    width: 70px;
+} 
+header .switch input
+{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+header span.slider
+{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 5px groove rgb(238, 223, 223);
+    background-color: rgb(10, 10, 10);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.slider::before
+{
+    position: absolute;
+    content: '';
+    height: 17px;
+    width: 27px;
+    border: 4px groove gray;
+    left: 0px;
+    bottom: 0px;
+    background-color: gray;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+input:checked + .slider 
+{
+    background-color: aqua;
+    box-shadow: 0 0 10px white;
+}
+input:checked + .slider:before {
+    transform: translateX(25px);
+}
+
+.slider.round
+{
+    border-radius: 34px;
+}
+.slider.round::before
+{
+    border-radius: 30px;
+}
+nav a
+{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    position: relative;
+    margin: 10px;
+    color:#7d2ae8;
+    font-weight: 900;
+    font-size: 1.2em;
+}
+nav span
+{
+    display: inline-block;
+    position: absolute;
+    left: -0.5em;
+    bottom: 1em;;
+    height:0.2em;
+    width: 0em;
+    transition: all ease-in-out .5s;
+    background-color:#7d2ae8;
+
+}
+nav a:hover  span
+{
+    transform: translateX(0.5em);
+    width: 2.5em;
+    background-color:#7d2ae8;
+   
+}
+
+/*-----------------------------------------------header section end -----------------------------------------------*/
+
+
+
+
+
+/*-----------------------------------------------Home section start -----------------------------------------------*/
+/* home section */
+.home
+{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* profile image section */
+#image
+{
+    display: flex;
+    height: 35em;
+    filter: drop-shadow(0 -20px 15px rgb(46, 41, 48));
+    transition: all .5s;
+    perspective: 500px;
+}
+#image:hover 
+{
+    filter: drop-shadow(0 -20px 15px white);
+    transform: scale(1.1);
+}
+
+/* my-Detail section */
+.my-Detail
+{
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+
+}
+.my-Detail h1
+{
+    display: inline-block;
+    font-size: 3em;
+    position: relative;
+    transition: all .5s;
+    color:white;  
+}
+.my-Detail h1 span
+{
+    color: #7d2ae8;
+}
+.my-Detail h1 span:hover
+{
+    filter: drop-shadow(20px 10px 4px rgba(244, 244, 244, 0.509));
+}
+.my-Detail h3
+{
+    font-size: 2em;
+    color:white;
+}
+.my-Detail p
+{
+    font-size: 1em;
+    color:white;
+}
+
+
+/* button section */
+#button
+{
+    padding: 20px 0 10px 0;
+    letter-spacing: 2px;
+}
+#button a
+{
+    padding: 0.35em 1em ;
+    
+    background-color: #7d2ae8;
+    border: 2px solid #7d2ae8;
+    color: white;
+    font-weight: 500;
+    font-size: 1em;
+    margin-bottom: 1em;
+    margin-top:1em;
+    transition: all 0.3s;   
+    color:white;
+}
+#button a:nth-child(2)
+{
+   
+    background-color: transparent;
+    color:#fbf8ff;
+    margin-left: 1em;
+}
+#button a:nth-child(1):hover
+{
+    background-color: transparent;
+    color:#7d2ae8;
+}
+#button a:nth-child(2):hover
+{
+    background-color: #7d2ae8;
+    color: rgb(251, 239, 239);
+}
+
+/* social icons */
+.my-Detail #social-Icon
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1em;
+    padding-top: 1em;
+  
+}
+#social-Icon img
+{
+    position: relative;
+    height: 1.90em;
+    width: 1.90em;
+    margin: .13em;
+    background-color: transparent;
+    border-radius: 50%;
+    z-index: 20;
+    transition: all ease-in-out .3s;
+
+}
+
+#social-Icon img:hover 
+{
+    background-color: aqua;
+}
+#social-Icon img:active
+{
+    box-shadow: 0 0 10px 15px rgb(86, 232, 232);
+}
+
+img
+{
+    width: 100%;;
+    z-index: 30;
+    border-radius: 50%;
+}
+
+/*-----------------------------------------------home section end -----------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------About section start -----------------------------------------------*/
+/* About Section */
+/* button of this section made in home section */
+#about
+{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background:repeating-radial-gradient(circle at 10%,rgba(222,184,135,0)10%,rgba(128, 128, 128, 0) 50%,rgba(128, 128, 128, 0) 50%,rgb(0, 255, 255)75%);
+    padding: 5em 0 2em 0;
+}
+#about article 
+{
+    max-width: 25em;
+}
+#about article h3
+{
+    font-size: 1.5em;
+    color:white;
+}
+article h3 span
+{
+    color: #7d2ae8;
+}
+#about article h1
+{
+    font-size: 2em;
+    color:white;
+}
+#about article p
+{
+    color:white;
+}
+article .ex-detail
+{
+    margin-top: 1em;
+    display: flex;
+    color:white;
+}
+article .ex-detail span
+{
+    color:#7d2ae8;
+    font-weight: 300;
+}
+.ex-detail p
+{
+    font-weight: 700;
+    color:white;
+}
+.ex-detail img
+{
+    border-radius: 0;
+}
+article #box
+{
+    display: flex;
+}
+
+#about #image img 
+{
+    transform: scale(1.3);
+    margin-bottom: 2em;
+}
+
+/*-----------------------------------------------About box end -----------------------------------------------*/
+
+
+
+
+html
+{
+    --degree: 0;
+}
+@property --degree
+{
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+#skill
+{
+    /* background: linear-gradient(45deg, grey,white, grey); */
+    background-color:transparent;
+    height: 100vh;
+    width: 100vw;
+}
+#skill h2
+{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 3em;
+    padding: 2em 0 0em 0;
+    font-weight: 800;
+}
+#skill h2 span
+{
+    color:blueviolet;
+}
+
+#bar
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 1000;
+}
+.linear-bar h1
+{
+    font-size: 1.3em;
+    color: rgb(255, 252, 252);
+}
+
+.linear-bar
+{
+    background: radial-gradient(circle at 90%, aqua 10%,rgba(0, 0, 0, 1) 15%,rgba(0, 0, 0, 1)10%);
+    box-shadow: inset -3px -3px 5px rgba(0,0,0,0.4), inset 3px 3px 5px rgba(0,0,0,0.4);
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    border-radius: 10px;
+    transition: all 1s;
+}
+.linear-bar:hover
+{
+    animation: motion infinite 1.5s;
+}
+@keyframes motion
+{
+    100%
+    {
+        background: radial-gradient(circle at 90%,aqua 10%, black 50%, black 10%);
+    }
+    75%
+    {
+        background: radial-gradient(circle at 90%, aqua 10%, black 30%,black 10%);
+    }
+    50%
+    {
+        background: radial-gradient(circle at 90%,aqua 10%, black 15%,black 10%);
+    }
+    0%
+    {
+        background: radial-gradient(circle at 90%, aqua 10%, black 10%, black 10%);
+    }
+}
+
+
+.linear-bar h3 
+{
+    font-size: 1.5em;
+    text-align: center;
+    color: rgb(240, 234, 234);
+}
+.linear-bar h3 span
+{
+    color:#7d2ae8;
+}
+#bar-background
+{
+    display: block;
+    width: 30em;
+    height: 0.8em;
+    background-color: rgba(0, 0, 0, 0);
+    margin: 0 0.2em 0.5em 0.2em;
+    border-radius: 10px;
+}
+#bar-background .progress
+{
+    display: block;
+    text-align: end;
+    font-size: 11px;
+    color:magenta;
+    font-weight: 600;
+    height: 100%;
+    background-color: aqua;
+    box-shadow: 0 0 2px 1px aqua;
+    border-radius: 10px;
+    transition:all 1s;
+}
+.html
+{
+    width: 80%;
+    animation: html 2s;
+}
+#bar-background .progress:hover
+{
+    background-color: rgb(60, 0, 255);
+    box-shadow: 0 0 2px 2px aqua;
+    color: white;
+}
+.css
+{
+    width: 70%;
+    animation: css 1s;
+   
+}
+@keyframes css
+{
+    0%
+    {
+        width: 0%;
+    }
+    100%
+    {
+        width: 70%;
+    }
+}
+
+
+@keyframes html
+{
+    0%
+    {
+        width: 0%;
+    }
+    100%
+    {
+        width: 80%;
+    }
+}
+
+.c
+{
+    width: 80%;
+    animation: c 2s;
+}
+@keyframes c
+{
+    0%
+    {
+        width: 0%;
+    }
+    100%
+    {
+        width: 80%;
+    }
+}
+.cpp
+{
+    width: 60%;
+    animation: cpp 2s;
+}
+@keyframes cpp
+{
+    0%
+    {
+        width: 0%;
+    }
+    100%
+    {
+        width: 60%;
+    }
+}
+.python
+{
+    width: 30%;
+    animation: python 2s;
+}
+@keyframes pyhton
+{
+    0%
+    {
+        width: 0%;
+    }
+    100%
+    {
+        width: 30%;
+    }
+}
+.dsa
+{
+    width: 20%;
+    animation: dsa 2s;
+}
+@keyframes dsa
+{
+    0%
+    {
+        width: 0%;
+    }
+    100%
+    {
+        width: 20%;
+    }
+}
+
+
+
+/*---------------------------------------------------circle presentation start---------------------------------------*/
+
+.circular-bar
+{
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+#circular-first
+{
+    margin-right: 5em;
+    
+}
+#circular-background
+{
+    display: block;
+    height: 10em;
+    width: 10em;
+    /* background: rgb(64, 65, 65) linear-gradient(to right, transparent 50%,var(--clr)0); */
+    background: conic-gradient(var(--clr) 0turn var(--degree),#3f3e3e 0turn);
+    border-radius: 50%;
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:  -1px -2px 8px black ,inset 1px 2px 6px black;
+
+    
+}
+@keyframes rotation 
+{
+    100%
+    {
+        --degree: 240deg;
+    }    
+}
+.circular-html
+{
+    animation: rotation-html  forwards 2s;
+}
+@keyframes rotation-html 
+{
+    100%
+    {
+        --degree: 280deg;
+    }    
+}
+.circular-css
+{
+    animation: rotation-css  forwards 2s;
+}
+@keyframes rotation-css 
+{
+    100%
+    {
+        --degree: 240deg;
+    }    
+}
+.circular-dsa
+{
+    animation: rotation-dsa  forwards 2s;
+}
+@keyframes rotation-dsa 
+{
+    100%
+    {
+        --degree: 100deg;
+    }    
+}
+.circular-python
+{
+    animation: rotation-python  forwards 2s;
+}
+@keyframes rotation-python 
+{
+    100%
+    {
+        --degree: 150deg;
+    }    
+}
+
+
+.circular-box
+{
+    display: block;
+    height: 7em;
+    width: 7em;
+    background-color:black;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow:  0px 0px 16px rgb(48, 47, 47) , 0px 0px 16px rgb(38, 37, 37);
+
+}
+
+.circular-bar .circular-box h4
+{
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+
+}
+.circular-box h5 
+{
+    color:var(--clr);
+    font-weight: 500;
+    font-size:20px;
+
+}
+
+
+
+/*----------------------------------------creative button ----------------*/
+
+.creative-btn
+{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.creative-btn a
+{
+    position: relative;
+    display: block;
+    overflow: hidden;
+  
+    
+}
+
+.creative-btn a span
+{
+    position: relative;
+    z-index: 1;
+    color: black;
+}
+.creative-btn a .liquid
+{
+    position: absolute;
+    left: 0;
+    top: -80px;
+    width: 200px;
+    height: 200px;
+    box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+    transition: 0.5s;
+    background-color: #7d2ae8;
+}
+.creative-btn a:hover .liquid
+{
+    top:-120px;
+}
+a .liquid::before,
+a .liquid::after
+{
+    content: '';
+    position:absolute;
+    width: 170%;
+    height: 200%;
+    top: 0;
+    left: 50%;
+    transform:translate(-50%,-75%);
+   
+    
+}
+
+
+
+a .liquid::before
+{
+    border-radius: 35%;
+    background: linear-gradient(45deg,gray, white,gray);
+    animation: animate 5s linear infinite;
+}
+a .liquid::after
+{
+    
+    border-radius: 40%;
+    background: linear-gradient(45deg,gray, white,gray);
+    animation: animate 10s linear infinite;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform:translate(-50%,-75%) rotate(0deg);
+    }   
+    100%
+    {
+        transform: translate(-50%,-75%) rotate(360deg);
+    } 
+}
+
+
+
+/*---------------------certification section start  --------------------------------------------- --*/
+#certification
+{
+   
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ 
+}
+#certification h1
+{
+    text-align: center;
+    font-size: 3em;
+    font-weight: 900;
+    color: white;
+}
+#certification h1 span
+{
+    color: blueviolet;
+    font-weight: bolder;
+}
+
+#certification .certificate
+
+{
+    height: 70%;
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+#certification .first-two,
+#certification .second-two
+{
+    height: 100%;
+    width:50%;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+#certification .outer-box
+{
+    position: relative;
+    height: 70%;
+    width: 35%;
+    background-color: transparent;
+    perspective: 1000px;
+    border-radius: 10px;
+    
+}
+#certification .inner-box
+{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transform-style:preserve-3d;
+    text-align: center;
+    transition: transform 2s;
+    box-shadow: inset -3px -3px 7px #ffffffb0,  
+    inset 3px 3px 5px rgba(94, 104, 121, 0.692); 
+    border-radius: 10px;
+    
+    
+}
+#certification .outer-box:hover .inner-box
+{
+    transform: rotateY(180deg);
+}
+#certification .front,
+#certification .back
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+#certification .front
+{   
+    background-color: rgba(10, 173, 255, 0.219);
+    backdrop-filter: blur(3px);
+    border-top: 1px solid rgba(255,255,255,0.4);
+    border-left: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.089);
+}
+#certification .front #card-no,
+#certification .back #card-no
+{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    font-size: 100px;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.299);
+   
+   
+}
+#certification .back h2
+{
+    color: #7d2ae8;
+}
+#certification .back p
+{
+    color: white;
+}
+#certification .front #card-title,
+#certification .back #card-title
+{
+    display: block;
+    font-size: 90px;
+    font-weight: 900;
+}
+#certification .back
+{
+
+    background-color: rgba(10, 173, 255, 0.219);
+    backdrop-filter: blur(3px);
+    border-top: 1px solid rgba(255,255,255,0.4);
+    border-left: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.089);
+    transform: rotateY(180deg);
+}
+.certification .back button
+{
+    border:#7d2ae8;
+}
+#certification .back button span
+{
+    height: 100%;
+    width: 100%;
+    border-color: rgb(94, 11, 94);;
+    padding: 3px;
+    color: rgb(0, 0, 0);
+    transition: all ease-in .6s;
+    position: relative;
+}
+#certification .back button span:hover
+{
+    background-color: rgb(94, 11, 94);
+    color: rgb(13, 13, 13);
+}
+
+.c-store
+{
+    position:absolute;
+    top:-20%;
+    left: -15%;
+    /* height: 100%; */
+    width: 150%;
+    display: none;
+}
+.card-2,
+.card-3
+{
+    left: -25%;
+}
+.card-4
+{
+    left: -40%;
+}
+.c-store img
+{
+    border-radius: 0%;
+}
+.c-store img:hover
+{
+    transform: scale(1.1);
+}
+.back button:focus .c-store
+{
+   
+    display:block;
+    z-index:100;
+}
+
+/*---------------------certification section end  --------------------------------------------- --*/
+
+
+
+@media screen and (max-width:768px) and (min-width:599px)
+{
+    #certification .outer-box
+{
+    position: relative;
+    height: 70%;
+    width: 46.5%;
+    background-color: transparent;
+    perspective: 1000px;
+    border-radius: 10px;
+    
+}
+}
+/*---------------------certification section end for responsiveness --------------------------------------------- --*/
+
+
+/* <!-- -------------------------------------project section start------------------------- --> */
+#project
+{
+    height: 100vh;
+    width: 100vw;
+    background-color:transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 0;
+    position: relative;
+}
+#project h4
+{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 0.2em;
+    margin-top: 2em;
+}
+#project h4 span
+{
+    color:blueviolet;
+}
+.project-cards-packet
+{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.project-box
+{
+    height: 100%;
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    perspective: 500px;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 5%;
+    padding-top: 2%;
+}
+.project-card
+{
+    height: 40%;
+    width: 50%;
+    background-color: rgba(10, 173, 255, 0.219);
+    box-shadow: inset -3px -3px 5px rgba(223, 235, 233, 0.206),inset 3px 3px 5px rgba(238, 241, 242, 0.291);
+    transform: skewY(-27deg);
+    transition: all 1s ;
+    position: relative;
+}
+.project-card:hover
+{
+    transform: skewY(0deg);
+    z-index: 200;
+    height: 45%;
+    width: 55%;
+}
+.project-card span
+ {   
+    position: absolute;
+    right: -30%;
+    bottom: 0;
+    font-size: 100px;
+    font-weight: 900;
+    color: aqua;
+    z-index: 1000;
+}
+.first-project,
+.third-project,
+.fifth-project
+{
+    top: 7%;
+}
+.project-card img
+{
+    border-radius: 0%;
+    height: 100%;
+}
+
+
+
+/* <!-- -------------------------------------project section end------------------------- --> */
+
+
+
+
+
+
+
+
+/* <!-- -------------------------------------project responsive section start------------------------- --> */
+
+@media screen and (max-width:360px) and (max-width:800px) and (min-width: 599px) 
+{
+
+    .project-card
+    {
+        height: 30%;
+        width: 70%;
+      
+    }
+    .project-card:hover
+    {
+        height: 32%;
+        width: 75%;
+    }
+    .project-card span
+     {   
+        position: absolute;
+        right: -10%;
+        bottom: 0;
+        font-size: 20px;
+        font-weight: 500;
+       
+    }
+}
+@media screen and (max-width:800px) and (min-width: 599px) 
+{
+    .project-card
+    {
+        height: 30%;
+        width: 70%;
+    }
+    .project-card:hover
+    {
+       
+        height: 32%;
+        width: 75%;
+    }
+    .project-card span
+    {   
+        right: -15%;
+        font-size: 60px;
+    }
+}
+
+img 
+{
+    width: 100%;
+}
+
+/* <!-- -------------------------------------project responsive section end------------------------- --> */
+
+
+
+/* <!-- ------------------------------------contact section start here    ------------------------------------ --> */
+html
+{
+    --angle:0;
+   
+}
+@property --angle
+{
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+#contact
+{
+    height: 100vh;
+    width: 100vw;
+    margin-top: 2%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+.icn
+{
+    position: absolute;
+    height: 8.5%;
+    width: 4%;
+    border-radius: 50%;
+   
+}
+.call-icn
+{
+    top: 80%;
+    left: 5%;
+
+}
+.email-icn
+{
+    top: 60%;
+    left: 30%;
+   
+}
+.mobile-icn
+{
+    top: 10%;
+    left: 10%;
+}
+.trade-icn
+{
+    top: 55%;
+    right: 10%;
+}
+.bell-icn
+{
+    top: 70%;
+    right: 29%;
+}
+.computer-icn
+{
+    top: 30%;
+    right: 20%;
+}
+
+#contact h5
+{
+    color: white;
+    font-size: 3em;
+    text-align: center;
+    margin-top: 2%;
+}
+#contact p
+{
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    max-width: 500px;
+}
+
+.contact-animation-box
+{
+    height: 55%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:repeating-conic-gradient(from var(--angle),#1E90FF 0%, transparent 10%,
+    transparent 50%);
+    animation:rotate 6s linear infinite;
+    box-shadow: inset -3px -3px 5px rgba(0, 255, 255, 0.1),inset 3px 3px 5px rgba(0, 255, 255, 0.211);
+}
+@keyframes rotate
+{
+    100%
+    {
+       --angle: -360deg;
+    }
+    50%
+    {
+        --angle: 360deg;
+    }    
+}
+.contact-input-box
+{
+    height: 97.5%;
+    width: 97.5%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.contact-input-box h6
+{
+    font-size: 2em;
+}
+
+.contact-input-box #cont
+{
+    color: blueviolet;
+}
+.contact-input-box form
+{
+    height:60%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color:white;
+  
+}
+input
+{
+    width: 70%;
+    height:9%;
+    outline: transparent;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid aqua;
+   color: #1E90FF;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 4%;
+   position: relative;
+}
+form span
+{   
+   margin-left: 10%;
+   margin-bottom: 0%;
+   font-size: 1em;
+}
+form button
+{
+    height: 15%;
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #1E90FF;
+    border-color:#1E90FF;
+    letter-spacing: 2px;
+}
+
+/* <!-- ------------------------------------contact section end here    ------------------------------------ --> */
+
+
+
+
+#contact img
+{
+    width: 100%;
+    border-radius: 0%;
+}
+
+/* <!-- ------------------------------------contact section responsive end here    ------------------------------------ --> */
+
+
+
+/* -------------------------footer--------------------- */
+footer
+{
+    height: 10%;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #7d2ae8; */
+}
+#footer
+{
+    height: 10%;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3em; 
+}
+.first-block-footer,
+.Second-block-footer,
+.Third-block-footer
+{
+    height: 100%;
+    width: 33.33%;
+    position: relative;
+    
+}
+.first-block-footer h1
+{
+    font-size: 2em;
+    color: white;
+    letter-spacing: 2px;
+}
+.first-block-footer span
+{
+    font-size: 1em;
+    color: #7d2ae8;
+}
+.first-block-footer p
+{
+    max-width: 60%;
+    color: white;
+}
+
+.Second-block-footer
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.Second-block-footer a
+{
+    color: white;
+    transition: all 1s;
+}
+.Second-block-footer a:hover
+{
+    transform: translateX(10px);
+}
+.Third-block-footer form
+{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.Third-block-footer .btn-mail
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btn-mail input
+{
+    width: 100%;
+}
+.btn-mail #s-mail
+{
+    width: 100%;
+}
+.btn-mail h1
+{
+   font-size: 1.3em;
+   color: white;
+   letter-spacing: 2px;
+}
+.btn-mail span
+{
+    color: #7d2ae8;
+}
+#s-mail
+{
+    background-color: #7c2ae800;
+    color: white;
+    border-color: #7d2ae8;
+    transition: all linear .5s;
+    cursor:pointer;
+}
+#s-mail:hover
+{
+    background-color:#7d2ae8;
+    color: black;
+}
+#s-mail:focus
+{
+    transform: scaleX(0.8);
+}
+
+.Third-block-footer form a
+{
+    position: absolute;
+    left:-10%;
+    bottom: -1%;
+    height:30%;
+    width: 35%;
+    background-color:#7d2ae8;
+    text-align: center;
+    letter-spacing: 2px;
+    perspective: 1000px;
+    transition: all .5s;
+    color: black;
+
+}
+.Third-block-footer form a:hover
+{
+    box-shadow: 0px 0px 10px 10px  green;
+    transform: scale(0.8);
+    background-color: green;
+}
+
+
+
+/* ---------------------footer responsive------------------- */
+
+@media screen and (max-width:600px) 
+{
+    footer
+    {
+        height: 20%;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* background-color: #7d2ae8; */
+    }
+    #footer
+    {
+        height: 10%;
+        width: 100vw;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 2em; 
+    }
+    .first-block-footer,
+    .Second-block-footer,
+    .Third-block-footer
+    {
+        height: 33.33%;
+        width: 100%;
+        position: relative;
+        margin-bottom: 13%;
+        
+    }
+    .first-block-footer h1
+    {
+        font-size: 1.5em;
+        color: white;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    .first-block-footer span
+    {
+       
+        color: #7d2ae8;
+    }
+    .first-block-footer p
+    {
+        max-width: 100%;
+        color: white;
+        text-align: center;
+    }
+    
+    .Second-block-footer
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .Second-block-footer a
+    {
+        color: white;
+        transition: all 1s;
+    }
+    .Second-block-footer a:hover
+    {
+        transform: translateX(10px);
+    }
+    
+    .Third-block-footer form
+    {
+        
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    
+    .Third-block-footer .btn-mail
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .btn-mail input
+    {
+        width: 100%;
+        cursor: pointer;
+    }
+    .btn-mail #s-mail
+    {
+        width: 100%;
+    }
+    .btn-mail h1,
+    .btn-mail h1 span
+    {
+       font-size: 0.9em;
+       color: white;
+       letter-spacing: 1px;
+    }
+    .btn-mail h1 span
+    {
+        color: #7d2ae8;
+    }
+    #s-mail
+    {
+        background-color: #7d2ae8;
+        border-color: #7d2ae8;
+        cursor: pointer;
+    }
+  
+    .Third-block-footer form a
+    {
+        position: absolute;
+        left:34%;
+        bottom: -40%;
+        height:30%;
+        width: 32%;
+        background-color:#7d2ae8;
+        text-align: center;
+        letter-spacing: 2px;
+        transition: all .5s;
+        color: black;
+    
+    }
+    .Third-block-footer form a:hover
+    {
+        box-shadow: 0px 0px 10px 10px  rgb(34, 127, 9);
+        transform: scale(0.8);
+    }
+    
+    
+    
+}
+
+
+
+
+
+/* ------------------------------------------responsive---------------------------------------- */
+@media screen and (max-width:600px) 
+{
+
+    
+.E-data
+{
+    background-color: #090909;
+}
+
+  /* ------------------------------------------responsive header begin---------------------------------------- */
+    header
+    {
+     display:flex;
+     flex-direction: column;
+     justify-content: center;
+     margin: auto;
+     background-color:transparent;
+    }
+    nav a
+    {
+     color: rgb(245, 5, 5);
+     font-size: 15px;
+     font-weight: 700;
+    }
+    nav a:hover  span
+    {
+     background-color: rgb(212, 22, 22);
+    }
+    #logo,
+    #nav_Bar
+    {
+     margin-bottom: .5em;
+    }
+    .day_Night
+    { 
+     position: absolute;
+     right: -0.3em;
+     top: 7em;
+    }
+    /* --------------------------------------------responsive home section---------------------- */
+    .home
+    {
+        margin-top:8em;
+        height: 45vh;
+    }
+    #image
+    {
+        height: 20em;
+    }
+    .my-Detail h1
+    {
+        font-size: 1.5em;
+    }
+    .my-Detail h3
+    {
+        font-size: 1em;
+    }
+    .my-Detail p
+    {
+        font-size: 0.6em;
+    }  
+    #button
+    {
+        padding: 10px 0 5px 0;
+    }
+    #button a
+    {
+        padding: 0.17em 0.5em ;
+        border: 1px solid #7d2ae8;
+        margin-bottom: .5em;
+    }
+    #button a:nth-child(2)
+    {
+        margin-left: .5em;
+    }
+
+/* social icons */
+.my-Detail #social-Icon
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 0em;
+    padding-top: 1em;
+   
+  
+}
+#social-Icon img
+{
+    height: 1.0em;
+    width: 1.0em;
+}
+
+img
+{
+    height: 80%;
+    z-index: 30;
+    border-radius: 50%;
+}
+#button a
+{
+    font-size: .5em;
+}
+/* -------------------------------------------about section-------------------------- */
+
+#about
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background:repeating-radial-gradient(circle at 10%,rgba(222,184,135,0.7)10%,grey 50%,grey 50%,rgb(193, 194, 194)75%);
+    padding: 5em 0 2em 0;
+    height: 50vh;
+}
+#about article 
+{
+    max-width: 14em;
+}
+#about article h3
+{
+    font-size: .75em;
+}
+article h3 span
+{
+    color: #7d2ae8;
+}
+#about article h1
+{
+    font-size: 1em;
+}
+#about article p
+{
+    font-size: .60em;
+}
+article .ex-detail
+{
+    margin-top: .5em;
+    display: flex;
+}
+article .ex-detail span
+{
+    color:#7d2ae8;
+    font-weight: 300;
+    font-size: .75em;
+}
+.ex-detail p
+{
+    font-weight: 500;
+    font-size:1em;
+}
+article #box
+{
+    display: flex;
+    
+}
+#box #icon
+{
+    height: 3em;
+}
+
+#about #image img 
+{
+    transform: scale(1);
+    margin-bottom: 0em;
+
+}
+#skill
+{
+    height: 100%;
+}
+#bar
+{
+flex-direction: column;
+}
+#bar-background
+{
+width: 18em;
+height: 0.6em;
+}
+#bar-background .progress
+{
+font-size: 10px;
+}
+.circular-bar
+{
+justify-content: space-around;
+margin-top: 5em;
+}
+#circular-background
+{
+height: 8em;
+width: 8em;
+margin-bottom: 2em;
+}
+
+#circular-first
+{
+margin-right: 2em;
+}
+
+.circular-box
+{
+height: 5em;
+width: 5em;
+}
+.circular-bar .circular-box h4
+{
+    font-size: 16px;
+}
+.circular-box h5 
+{
+    font-size:18px;
+}
+
+/* ----------------------creative btn----------------------------- */
+.creative-btn a .liquid
+{
+    left: -55px;
+    top: -50px;
+    width: 200px;
+    height: 200px;
+
+}
+a .liquid::before,
+a .liquid::after
+{
+
+    width: 100%;
+    height: 100%;  
+    
+}  
+.creative-btn a:hover .liquid
+{
+    top:-120px;
+}
+    /* ---------------------------------certification---------------------------- */
+            
+    #certification
+    {
+        
+        height: 100vh;
+        width: 100vw;
+        background: linear-gradient(45deg,grey,black, grey,black);
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        
+    
+    }
+   
+    #certification .certificate
+    
+    {
+        height: 80%;
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+   
+    }
+    #certification .first-two,
+    #certification .second-two
+    {
+        
+       height: 50%;
+       width: 100%;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        
+    }
+    #certification .outer-box
+    {
+        height: 210px;
+        width: 160px;
+    }
+
+    #certification .outer-box:active .inner-box
+    {
+        transform: rotateY(180deg);
+    }
+    #certification .front #card-no,
+    #certification .back #card-no
+    {
+        font-size: 60px;
+    }
+    #certification .back h2
+    {
+        color: rgb(237, 237, 237);
+    }
+    #certification .front #card-title,
+    #certification .back #card-title
+    {
+        display: block;
+        font-size: 50px;
+        font-weight: 900;
+    }
+    #certification .back h2
+    {
+        font-size: 18px;
+    }
+    #certification .back p
+    {
+        font-size: 12px;
+    }
+    #certification .back a span
+    {
+        height: 0.5em;
+        width: 2em;
+        border: 1px solid  rgb(94, 11, 94);;
+        padding: 2px;
+        color: rgb(255, 255, 255);
+        background-color: rgb(94, 11, 94);
+        font-size: 12px;
+    }
+    /* -------------------------------------project section----------------------------- */
+    .project-card
+    {
+        height: 40%;
+        width: 70%;
+       
+    }
+    .project-card:hover
+    {
+       
+        height: 45%;
+        width: 75%;
+    }
+    .project-card span
+     {   
+        position: absolute;
+        right: -10%;
+        bottom: 0;
+        font-size: 40px;
+    
+    }
+    
+    
+}
+
+/* <!-- ------------------------------------contact section responsive  here    ------------------------------------ --> */
+@media screen  and (max-width:600px)
+{
+    .contact-animation-box
+    {
+        height: 55%;
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background:repeating-conic-gradient(from var(--angle),#1E90FF 0%, transparent 10%,
+        transparent 50%);
+        animation:rotate 10s linear infinite;
+        box-shadow: inset -3px -3px 5px rgba(0, 255, 255, 0.125),inset 3px 3px 5px rgba(0, 255, 255, 0.211);
+    }
+    .icn
+    {
+        position: absolute;
+        height: 6.5%;
+        width: 7%;
+        border-radius: 50%;
+       
+    }
+    .bell-icn
+    {
+        top: 90%;
+        right: 29%;
+       
+    }
+
+    
+    .email-icn
+    {
+        top: 25%;
+        left: 30%;
+       
+    }
+    .mobile-icn
+    {
+        top: 35%;
+        left: 7%;
+    }
+    
+    #contact h5
+    {
+        color: white;
+        font-size: 1.5em;
+        text-align: center;
+     
+    }
+    #contact p
+    {
+        color: white;
+        text-align: center;
+        font-size: 0.75em;
+        max-width: 500px;
+    }
+    .contact-input-box h6
+    {
+        font-size: 20px;
+    }
+    form span
+    {   
+        font-size: 0.75em;
+    }
+
+}
+@media screen  and (max-width:900px) and (min-width:599px)
+{
+    .contact-animation-box
+{
+    height: 55%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:repeating-conic-gradient(from var(--angle),#1E90FF 0%, transparent 10%,
+    transparent 50%);
+    animation:rotate 10s linear infinite;
+    box-shadow: inset -3px -3px 5px rgba(0, 255, 255, 0.125),inset 3px 3px 5px rgba(0, 255, 255, 0.211);
+}
+}
